@@ -1,0 +1,80 @@
+COMPILING
+gcc -g fsck_list.c fsck_main.c partition_manager.c bio.c ext2_structures.c ext2_namei.c -I . -o fsck 
+FREEING LOOPBACKS FOR TESTING
+EXTRACTING DISK
+disk
+ext2_fs.h
+genhd.h
+readwrite.c
+RUNNING 18-746 FSCK
+
+Bootid		StartCHS	EndCHS		Type		Start	Length
+0,INACTIVE	0-1-1		2-254-63	0x83(EXT2)	63	48132
+0,INACTIVE	0-0-0		0-0-0	0x0	UNKNOWN		0	0
+0,INACTIVE	3-0-1		5-254-63	0x83(EXT2)	48195	48195
+0,INACTIVE	6-0-1		9-254-63	0x5(EXTENDED)	96390	64260
+0,INACTIVE	6-1-1		6-254-63	0x82[SWAP]	96453	16002
+0,INACTIVE	7-1-1		9-254-63	0x83(EXT2)	112518	48132
+
+
+Partition1:Superblock Magic=ef53
+
+START FSCK Pass1 on Partiton 1
+END   FSCK Pass1 on Parition 1 [SUCCESS]
+
+START FSCK Pass2 on Partiton 1
+END   FSCK Pass2 on Parition 1 [SUCCESS]
+
+START FSCK Pass3 on Partiton 1
+END   FSCK Pass3 on Parition 1 [SUCCESS]
+
+START FSCK Pass4 on Partiton 1
+ Cannot Set bits at negetive bit offsets
+ Cannot Set bits at negetive bit offsets
+END   FSCK Pass4 on Parition 1 [SUCCESS]
+
+
+
+Partition3:Superblock Magic=ef53
+
+START FSCK Pass1 on Partiton 3
+	=>PASS1:Fixing Inode 12 .. 2019650113->2009 
+END   FSCK Pass1 on Parition 3 [SUCCESS]
+
+START FSCK Pass2 on Partiton 3
+END   FSCK Pass2 on Parition 3 [SUCCESS]
+
+START FSCK Pass3 on Partiton 3
+	=>PASS3:Fixing inode 4021 linkcount 114->2
+END   FSCK Pass3 on Parition 3 [SUCCESS]
+
+START FSCK Pass4 on Partiton 3
+ Cannot Set bits at negetive bit offsets
+ Cannot Set bits at negetive bit offsets
+END   FSCK Pass4 on Parition 3 [SUCCESS]
+
+
+
+Partition6:Superblock Magic=ef53
+
+START FSCK Pass1 on Partiton 6
+END   FSCK Pass1 on Parition 6 [SUCCESS]
+
+START FSCK Pass2 on Partiton 6
+	=>PASS2:Fixing Unreferenced Inode Found 31
+	  Location Partition 5,BlockGroup 0,BitOffset 30
+	=>PASS1: Trying [INCREMENTAL] pass 1 fix for DIR_INODE 31
+	=>PASS1:Fixing Inode 31 .. 2->11 	  Added to lost+found
+END   FSCK Pass2 on Parition 6 [SUCCESS]
+
+START FSCK Pass3 on Partiton 6
+	=>PASS3:Fixing inode 2 linkcount 9->8
+	=>PASS3:Fixing inode 31 linkcount 1->2
+END   FSCK Pass3 on Parition 6 [SUCCESS]
+
+START FSCK Pass4 on Partiton 6
+	=>PASS4:Fixing Data Block 724: Is incorrectly marked free in blockbitmap
+ Cannot Set bits at negetive bit offsets
+ Cannot Set bits at negetive bit offsets
+END   FSCK Pass4 on Parition 6 [SUCCESS]
+

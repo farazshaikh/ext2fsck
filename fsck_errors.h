@@ -1,0 +1,12 @@
+#define FSCK_ERR_NO_SUCH_PARTITION   -300
+#define FSCK_ERR_PARTITION_TOO_SMALL -301
+#define FSCK_ERR_NOT_LINUX_NATIVE_FS -302
+#define FSCK_ERR_CANNOT_MAP_INODE    -304
+#define FATAL_ERROR                  -305
+#define FSCK_ERR_LOGICAL_BLK_OFF_BOUNDS -306
+#define FSCK_ERR_INVALID_OPERATION   -307
+#define FSCK_ERR_BAD_PATH            -308
+#define FSCK_ERR_PATH_DOES_NOT_EXIST          -309
+#define FSCK_ERR_IO                  -310
+#define IN
+#define OUT
